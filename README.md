@@ -38,6 +38,18 @@ npm start
 
 Access the web interface at: `http://localhost:3000`
 
+## ☁️ Deployment (Free)
+
+This project is configured for **Vercel**. You can deploy it for free in one click:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMaaar31%2Fawkward-response-for-all)
+
+Or manually:
+1. Push your code to GitHub.
+2. Sign up for [Vercel](https://vercel.com).
+3. Import your project (it will auto-detect the configuration).
+
+
 ## 🔌 API Documentation
 
 Integrate awkwardness directly into your applications.
