@@ -1,5 +1,7 @@
 # Awkward Response For All (ARFA)
 
+![Awkward Response For All Banner](assets/banner.png)
+
 > *The API nobody asked for, but everyone secretly needs.*
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
