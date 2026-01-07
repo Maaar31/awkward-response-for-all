@@ -2,9 +2,13 @@ import express from 'express';
 import { readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { inject } from '@vercel/analytics';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+
+// Initialize Vercel Web Analytics
+inject();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
