@@ -24,7 +24,7 @@ Get the awkwardness running locally in seconds.
 
 ```bash
 # Clone the repository
-git clone https://github.com/BAKENO/awkward-response-for-all.git
+git clone https://github.com/Maaar31/awkward-response-for-all.git
 
 # Navigate to the directory
 cd awkward-response-for-all
