@@ -5,7 +5,7 @@
 > *The API nobody asked for, but everyone secretly needs.*
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
+![Version](https://img.shields.io/badge/version-1.0.6-green.svg)
 ![Awkwardness](https://img.shields.io/badge/awkwardness-100%25-red.svg)
 
 ## 🔴 [**TRY THE LIVE DEMO**](https://awkward-response-for-all.vercel.app/)
