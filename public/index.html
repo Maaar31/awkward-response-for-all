@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awkward Response For All</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="glass-container">
+        <header>
+            <h1>Awkward Response For All</h1>
+            <p class="subtitle">Social discomfort, delivered.</p>
+        </header>
+
+        <section class="display-area">
+            <div class="category-tag hidden" id="categoryDisplay">CAT: GENERAL</div>
+            <div class="response-box">
+                <p id="responseText">Click the button. Don't make it weird.</p>
+                <div class="loader hidden" id="loader">
+                    <span>.</span><span>.</span><span>.</span>
+                </div>
+            </div>
+            <button class="copy-btn hidden" id="copyBtn" title="Copy to clipboard">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+            </button>
+        </section>
+
+        <section class="controls">
+            <div class="category-selector">
+                <button class="cat-btn active" data-cat="all">All</button>
+                <button class="cat-btn" data-cat="yes">Yes</button>
+                <button class="cat-btn" data-cat="no">No</button>
+                <button class="cat-btn" data-cat="maybe">Maybe</button>
+                <button class="cat-btn" data-cat="idk">IDK</button>
+            </div>
+
+            <button class="action-btn" id="getAwkwardBtn">
+                Make It Awkward
+            </button>
+        </section>
+
+        <footer>
+            <p>API Running on <span id="status">localhost</span> | <a href="/random" target="_blank">Raw JSON</a></p>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

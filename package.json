@@ -1,0 +1,21 @@
+{
+    "name": "awkward-response-for-all",
+    "version": "1.0.0",
+    "description": "A REST API that returns random awkward, cringe, or socially uncomfortable responses.",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "keywords": [
+        "awkward",
+        "funny",
+        "api",
+        "useless"
+    ],
+    "author": "BAKENO",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.18.2"
+    }
+}
