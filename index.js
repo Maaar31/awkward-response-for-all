@@ -1,5 +1,5 @@
 import express from 'express';
-import { readFile } from 'fs/promises';
+import { readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -9,18 +9,15 @@ const __dirname = dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Load data
+// Load data synchronously for Serverless compatibility
 let awkwardData = [];
-
-async function loadData() {
-    try {
-        const data = await readFile(join(__dirname, 'data.json'), 'utf-8');
-        awkwardData = JSON.parse(data);
-        console.log(`Loaded ${awkwardData.length} awkward responses.`);
-    } catch (error) {
-        console.error('Error loading data:', error);
-        process.exit(1);
-    }
+try {
+    const rawData = readFileSync(join(__dirname, 'data.json'), 'utf-8');
+    awkwardData = JSON.parse(rawData);
+    console.log(`Loaded ${awkwardData.length} awkward responses.`);
+} catch (error) {
+    console.error('Error loading data:', error);
+    // don't exit process in serverless, just log
 }
 
 // Middleware
@@ -32,7 +29,7 @@ app.use(express.static(join(__dirname, 'public')));
 // GET /
 app.get('/', (req, res) => {
     res.json({
-        message: "Welcome to Awkward As A Service (AAAS).",
+        message: "Welcome to Awkward Response For All (ARFA).",
         description: "The API nobody asked for, but everyone secretly needs.",
         endpoints: {
             "GET /": "This help message",
@@ -72,8 +69,12 @@ app.get('/random/:category', (req, res) => {
     res.json(categoryItems[randomIndex]);
 });
 
-// Start server
-app.listen(PORT, async () => {
-    await loadData();
-    console.log(`Server is running awkwardly on http://localhost:${PORT}`);
-});
+// Start server (only if not running in Vercel/Serverless environment)
+if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+    app.listen(PORT, () => {
+        console.log(`Server is running awkwardly on http://localhost:${PORT}`);
+    });
+}
+
+// Export for Vercel
+export default app;
