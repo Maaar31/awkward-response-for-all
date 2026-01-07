@@ -6,6 +6,8 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
 ![Awkwardness](https://img.shields.io/badge/awkwardness-100%25-red.svg)
 
+## 🔴 [**TRY THE LIVE DEMO**](https://awkward-response-for-all.vercel.app/)
+
 **Awkward Response For All** is a robust, open-source REST API designed to solve one specific problem: determining what to say when you have absolutely nothing to say. 
 
 With over **3,600 curated responses** across four scientifically proven categories of hesitation, this project provides the ultimate backend for social discomfort.
